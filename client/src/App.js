@@ -1,8 +1,22 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Search from "./components/Search/Search";
+import Saved from "./components/Saved/Saved";
+import "./App.css";
 
 class App extends Component {
   render() {
-    return <div>I'M READY TO USE THE BACK END APIS!</div>;
+    return (
+     <Router>
+       <div>
+        <Header />
+        <Route exact path="/" component={Search} />
+        <Route exact path="/search" component={Search} />
+        <Route exact path="/saved" component={Saved} />
+       </div>
+     </Router>
+    );
   }
 }
 
