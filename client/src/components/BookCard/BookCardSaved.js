@@ -1,5 +1,4 @@
 import React from "react";
-import M from "materialize-css";
 import "./BookCard.css";
 
 
@@ -21,20 +20,9 @@ import "./BookCard.css";
               </div>
           
               <div className="card-action">
-                <a href="#" onClick={()=>{
-                  props.saveBook({
-                    title: props.title,
-                    authors: props.author,
-                    description: props.description,
-                    image: props.coverImg,
-                    link: props.link
-                  })
-                  
-                  M.toast({html: 'Saved!'});
-                }}>Save For Later</a>
+                <a href="#" onClick={()=>{props.deleteBook(props.id)}}>Remove</a>
                 <a href={props.link} target="_blank">Find This Book</a>
-              </div>
-          
+              </div>          
             </div>
           
           </div>
