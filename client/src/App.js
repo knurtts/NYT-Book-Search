@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Search from "./components/Search/Search";
-import Saved from "./components/Saved/Saved";
+import Search from "./pages/Search/Search";
+import Saved from "./pages/Saved/Saved";
 import "./App.css";
 
 class App extends Component {
