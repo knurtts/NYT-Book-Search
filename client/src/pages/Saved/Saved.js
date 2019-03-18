@@ -27,7 +27,7 @@ class Saved extends Component {
     render () {
         return(<>
             <div className="container">
-            {this.state.books !== undefined ?
+            {this.state.books ?
                 this.state.books.map(book =>(
                     <BookCardSaved 
                     key={book._id}
