@@ -22,7 +22,7 @@ class Search extends Component {
 
     saveBook(obj) {
         console.log("Saving book...");
-        axios.post("http://localhost:3000/api/books", obj)
+        axios.post("/api/books", obj)
             .then(function() {
                 console.log("complete");
             }).catch(function(err) {

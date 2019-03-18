@@ -13,14 +13,14 @@ class Saved extends Component {
     };
     
     getBooks = () => {
-        axios.get("http://localhost:3000/api/books")
+        axios.get("/api/books")
             .then((res) => {
                 this.setState({books: res.data})
             });
     }
 
     deleteBook = (id) => {
-        axios.delete("http://localhost:3000/api/books/"+id)
+        axios.delete("/api/books/"+id)
             .then(() => {this.getBooks()});
     }
 
