@@ -16,7 +16,6 @@ class Search extends Component {
                 this.setState({
                     books: result.items
                 });
-                console.log(result);
             })
     }    
 
