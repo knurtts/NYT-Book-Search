@@ -18,7 +18,7 @@ module.exports = function(app) {
     });
 
     app.delete("/api/books/:id", function(req, res) {
-        Book.remove({_id: req.params.id})
+        Book.deleteOne({_id: req.params.id})
             .then(function() {
                 res.send("Record Deleted");
             });
